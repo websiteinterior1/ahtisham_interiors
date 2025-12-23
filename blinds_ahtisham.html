@@ -1082,7 +1082,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		</div>
 					</div>
 		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-36273670 elementor-hidden-desktop elementor-hidden-tablet elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="36273670" data-settings='{"background_background":"classic"}'><div class="mobile-custom-wrap"><div class="mobile-appt"><a class="elementor-button-link elementor-button mobile-appt-btn" href="contact_ahtisham.html"><span class="elementor-button-text">Request an appointment online</span></a></div><div class="mobile-bar"><button aria-label="Menu" class="mobile-menu-btn" id="mobileMenuToggle" type="button"><span></span><span></span><span></span></button><a aria-label="Home" class="mobile-logo" href="index.html"><img alt="Ahtisham Interior Footer Logo" src="ahtisham_interior_files/log3.png"/></a><div class="mobile-social"><a aria-label="Facebook" href="https://www.facebook.com/share/17UBvwDDTs/" rel="noopener" target="_blank"><i class="fa-brands fa-facebook-f"></i></a><a aria-label="Instagram" href="https://www.instagram.com/ahtishaminteriors?igsh=d245MDRoZW1jdGFj" rel="noopener" target="_blank"><i class="fa-brands fa-instagram"></i></a></div></div><div class="mobile-menu-panel" id="mobileMenuPanel"><a href="index.html">Home</a><a href="curtains_ahtisham.html">Curtains</a><a href="blinds_ahtisham.html">Blinds</a><a href="wallpapers_ahtisham.html">WallPapers</a><a href="flooring_ahtisham.html">Flooring</a><a href="pailing_ahtisham.html">Pailing</a><a href="sofas_ahtisham.html">Sofa</a><a href="products_ahtisham.html">Products</a><a href="rods_ahtisham.html">Rods</a><a href="projects_ahtisham.html">Projects</a><a href="about_ahtisham.html">About us</a><a href="contact_ahtisham.html">Contact us</a><a href="blog_ahtisham.html">Blog</a></div></div>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-36273670 elementor-hidden-desktop elementor-hidden-tablet elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="36273670" data-settings='{"background_background":"classic"}'><div class="mobile-custom-wrap"><div class="mobile-appt"><a class="elementor-button-link elementor-button mobile-appt-btn" href="contact_ahtisham.html"><span class="elementor-button-text">Request an appointment online</span></a></div><div class="mobile-bar"><button aria-label="Menu" class="mobile-menu-btn" id="mobileMenuToggle" type="button"><span></span><span></span><span></span></button><a aria-label="Home" class="mobile-logo" href="index.html"><img alt="Ahtisham Interior Footer Logo" src="ahtisham_interior_files/log3.png"/></a><div class="mobile-social"><a aria-label="Facebook" href="https://www.facebook.com/share/17UBvwDDTs/" rel="noopener" target="_blank"><i class="fa-brands fa-facebook-f"></i></a><a aria-label="Instagram" href="https://www.instagram.com/ahtishaminteriors?igsh=d245MDRoZW1jdGFj" rel="noopener" target="_blank"><i class="fa-brands fa-instagram"></i></a></div></div><div class="mobile-menu-panel" id="mobileMenuPanel" id="mobileMenuPanel"><a href="index.html">Home</a><a href="curtains_ahtisham.html">Curtains</a><a href="blinds_ahtisham.html">Blinds</a><a href="wallpapers_ahtisham.html">WallPapers</a><a href="flooring_ahtisham.html">Flooring</a><a href="pailing_ahtisham.html">Pailing</a><a href="sofas_ahtisham.html">Sofa</a><a href="products_ahtisham.html">Products</a><a href="rods_ahtisham.html">Rods</a><a href="projects_ahtisham.html">Projects</a><a href="about_ahtisham.html">About us</a><a href="contact_ahtisham.html">Contact us</a><a href="blog_ahtisham.html">Blog</a></div></div>
 <div class="elementor-container elementor-column-gap-default">
 <div class="elementor-column elementor-col-12 elementor-top-column elementor-element elementor-element-28c45ada" data-element_type="column" data-id="28c45ada">
 <div class="elementor-widget-wrap elementor-element-populated">
@@ -2009,6 +2009,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     const key = btn.getAttribute('data-filter');
     setActive(btn);
     applyFilter(key);
+  });
+})();
+</script>
+
+
+<script>
+(function(){
+  var btn = document.getElementById('mobileMenuToggle');
+  var panel = document.getElementById('mobileMenuPanel');
+  if(!btn || !panel) return;
+
+  function closeMenu(){
+    panel.classList.remove('is-open');
+    btn.classList.remove('is-open');
+    btn.setAttribute('aria-expanded','false');
+  }
+  function toggleMenu(){
+    var open = panel.classList.toggle('is-open');
+    btn.classList.toggle('is-open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+
+  btn.setAttribute('aria-controls','mobileMenuPanel');
+  btn.setAttribute('aria-expanded','false');
+
+  btn.addEventListener('click', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    toggleMenu();
+  });
+
+  document.addEventListener('click', function(e){
+    if(panel.classList.contains('is-open') && !panel.contains(e.target) && !btn.contains(e.target)){
+      closeMenu();
+    }
+  });
+
+  // Close on ESC
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeMenu();
   });
 })();
 </script>
