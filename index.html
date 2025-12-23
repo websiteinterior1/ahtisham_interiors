@@ -1025,27 +1025,87 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   background: #fff;
 }
 </style>
-<!-- ai-price-mobile-css -->
+<!-- mobile-fixes-css (generated) -->
 <style>
+/* Global safety nets to prevent horizontal scrolling on mobile */
+* { box-sizing: border-box; }
+html, body { max-width: 100%; overflow-x: hidden; }
+img, video, iframe { max-width: 100%; height: auto; }
+
+/* Elementor "stretched" sections in this exported HTML have hard-coded inline widths (e.g., 1521px).
+   Force them back to responsive sizing. */
+.elementor-section.elementor-section-stretched,
+.elementor-section.elementor-section-full_width {
+  width: 100% !important;
+  left: 0 !important;
+  right: 0 !important;
+}
+.elementor-sticky--active {
+  width: 100% !important;
+  left: 0 !important;
+  right: 0 !important;
+}
+
+/* Make sure containers don't run edge-to-edge awkwardly on small screens */
 @media (max-width: 768px) {
-  /* Hide social icons on mobile */
-  .elementor-widget-social-icons {
-    display: none !important;
+  .elementor-section .elementor-container,
+  .ast-container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
   }
 
-  /* Make sure top menu items are easy to tap and visible */
-  .elementor-nav-menu--layout-horizontal.elementor-nav-menu--dropdown,
-  .elementor-nav-menu--main.elementor-nav-menu__container {
-    width: 100%;
+  /* Stack columns reliably */
+  .elementor-column { width: 100% !important; }
+  .elementor-column-gap-no > .elementor-column,
+  .elementor-column-gap-default > .elementor-column { margin-bottom: 10px; }
+
+  /* Header: keep it clean + centered */
+  header .elementor-widget-image img { max-width: 180px; height: auto; }
+  .elementor-widget-icon .elementor-icon-wrapper a,
+  .elementor-widget-text-editor a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    text-decoration: none;
   }
-  .elementor-nav-menu--dropdown .elementor-nav-menu,
-  .elementor-nav-menu--layout-horizontal.elementor-nav-menu--dropdown .elementor-nav-menu {
-    display: block !important;
-  }
-  .elementor-nav-menu a.menu-link,
+
+  /* Keep the burger menu behaving like a burger (do NOT force menu always-open) */
+  .elementor-nav-menu--dropdown .elementor-nav-menu { display: none; }
+  .elementor-nav-menu--dropdown.elementor-nav-menu__container.elementor-active .elementor-nav-menu,
+  .elementor-nav-menu__container.elementor-active .elementor-nav-menu { display: block; }
+
   .elementor-nav-menu--dropdown a.menu-link {
     display: block;
-    padding: 10px 14px;
+    padding: 12px 14px;
+    border-radius: 10px;
+  }
+
+  /* Hero slider: nicer + tap-friendly */
+  .custom-hero-slider .slides { max-height: 360px; }
+  .custom-hero-slider .slider-btn {
+    font-size: 1.6rem;
+    padding: 0.2em 0.45em;
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+  }
+  .custom-hero-slider .slider-btn.prev { left: 10px; }
+  .custom-hero-slider .slider-btn.next { right: 10px; }
+  .custom-hero-slider .slider-dots { bottom: 10px; }
+  .custom-hero-slider .dot { width: 12px; height: 12px; }
+
+  /* General "clean modern" polish */
+  .elementor-button,
+  .wp-block-button__link,
+  button,
+  input[type="submit"] {
+    border-radius: 12px !important;
+  }
+
+  .ast-separate-container .ast-article-single,
+  .ast-separate-container .ast-article-post {
+    border-radius: 16px;
   }
 }
 </style>
