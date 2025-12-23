@@ -1109,52 +1109,69 @@ img, video, iframe { max-width: 100%; height: auto; }
   }
 }
 </style>
-<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" referrerpolicy="no-referrer" rel="stylesheet">
-</link>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" referrerpolicy="no-referrer" rel="stylesheet"/>
 <style>
 @media (max-width:768px){
-  /* Reset header chaos */
-  header, .elementor-location-header {padding:0;margin:0;}
+  /* hide the old stacked mobile header content (email/call/old menu/text widgets) */
+  section.elementor-element-36273670 > .elementor-container { display:none !important; }
 
-  /* Appointment button top */
-  .request-appointment,
-  .elementor-widget-button{
-    position:sticky;
-    top:0;
-    z-index:999;
-    margin:0;
-    border-radius:0;
+  /* our new mobile header */
+  section.elementor-element-36273670 { padding:0 !important; }
+  section.elementor-element-36273670 .mobile-custom-wrap{ width:100%; }
+
+  .mobile-appt-btn{
+    display:block;
+    width:100%;
+    text-align:center;
+    padding:14px 16px !important;
+    border-radius:0 !important;
   }
+  .mobile-appt{ position:sticky; top:0; z-index:1000; }
 
-  /* Header row */
-  .mobile-header-bar{
+  .mobile-bar{
     display:grid;
-    grid-template-columns:40px 1fr 60px;
+    grid-template-columns:44px 1fr 70px;
     align-items:center;
-    padding:10px 14px;
+    gap:10px;
+    padding:12px 14px;
+    background:#fff;
+    border-bottom:1px solid rgba(0,0,0,.08);
   }
 
-  /* Menu left */
-  .elementor-menu-toggle{grid-column:1;}
-
-  /* Logo center */
-  .site-logo, .elementor-widget-theme-site-logo{
-    grid-column:2;
-    justify-self:center;
+  .mobile-menu-btn{
+    width:44px; height:44px;
+    display:flex; flex-direction:column;
+    justify-content:center; gap:6px;
+    background:transparent; border:0; padding:0; margin:0;
+  }
+  .mobile-menu-btn span{
+    display:block; height:2px; width:22px;
+    background:currentColor; border-radius:2px;
   }
 
-  /* Socials right */
-  .header-socials, .elementor-widget-social-icons{
-    grid-column:3;
-    justify-self:end;
-  }
+  .mobile-logo{ justify-self:center; display:flex; align-items:center; }
+  .mobile-logo img{ max-height:42px; width:auto; }
 
-  /* Hide menu items until opened */
-  nav ul{display:none;}
+  .mobile-social{ justify-self:end; display:flex; align-items:center; gap:12px; }
+  .mobile-social a{ font-size:18px; line-height:1; }
+
+  .mobile-menu-panel{
+    display:none;
+    padding:10px 14px 18px;
+    background:#fff;
+  }
+  .mobile-menu-panel a{
+    display:block;
+    padding:14px 10px;
+    border-radius:12px;
+    text-align:center;
+    font-weight:600;
+    text-decoration:none;
+  }
+  .mobile-menu-panel a + a{ margin-top:8px; }
+  .mobile-menu-panel.is-open{ display:block; }
 }
-</style>
-
-</head>
+</style></head>
 <body class="home wp-singular page-template-default page page-id-12 wp-custom-logo wp-theme-astra wp-child-theme-astra-child theme-astra woocommerce-js ast-desktop ast-page-builder-template ast-no-sidebar astra-4.11.5 ast-header-custom-item-inside group-blog ast-single-post ast-mobile-inherit-site-logo ast-inherit-site-logo-transparent elementor-default elementor-kit-36 elementor-page elementor-page-12 e--ua-isTouchDevice e--ua-blink e--ua-chrome e--ua-webkit" data-elementor-device-mode="desktop" itemscope="itemscope" itemtype="https://schema.org/WebPage" style="">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-K97RVR2" style="display:none;visibility:hidden" width="0"></iframe></noscript>
@@ -1175,7 +1192,7 @@ img, video, iframe { max-width: 100%; height: auto; }
 </div>
 </div>
 </section>
-<section class="elementor-section elementor-top-section elementor-element elementor-element-36273670 elementor-hidden-desktop elementor-hidden-tablet elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="36273670" data-settings='{"background_background":"classic"}'>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-36273670 elementor-hidden-desktop elementor-hidden-tablet elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="36273670" data-settings='{"background_background":"classic"}'><div class="mobile-custom-wrap"><div class="mobile-appt"><a class="elementor-button-link elementor-button mobile-appt-btn" href="contact_ahtisham.html"><span class="elementor-button-text">Request an appointment online</span></a></div><div class="mobile-bar"><button aria-label="Menu" class="mobile-menu-btn" id="mobileMenuToggle" type="button"><span></span><span></span><span></span></button><a aria-label="Home" class="mobile-logo" href="index.html"><img alt="Ahtisham Interior Footer Logo" src="ahtisham_interior_files/log3.png"/></a><div class="mobile-social"><a aria-label="Facebook" href="https://www.facebook.com/share/17UBvwDDTs/" rel="noopener" target="_blank"><i class="fa-brands fa-facebook-f"></i></a><a aria-label="Instagram" href="https://www.instagram.com/ahtishaminteriors?igsh=d245MDRoZW1jdGFj" rel="noopener" target="_blank"><i class="fa-brands fa-instagram"></i></a></div></div><div class="mobile-menu-panel" id="mobileMenuPanel"><a href="index.html">Home</a><a href="curtains_ahtisham.html">Curtains</a><a href="blinds_ahtisham.html">Blinds</a><a href="projects_ahtisham.html">Projects</a></div></div>
 <div class="elementor-container elementor-column-gap-default">
 <div class="elementor-column elementor-col-12 elementor-top-column elementor-element elementor-element-28c45ada" data-element_type="column" data-id="28c45ada">
 <div class="elementor-widget-wrap elementor-element-populated">
@@ -1691,7 +1708,7 @@ img, video, iframe { max-width: 100%; height: auto; }
 <div class="content-area primary" id="primary">
 <main class="site-main" id="main">
 <article class="post-12 page type-page status-publish ast-article-single" id="post-12" itemscope="itemscope" itemtype="https://schema.org/CreativeWork">
- <!-- .entry-header -->
+<!-- .entry-header -->
 <div class="entry-content clear" itemprop="text">
 <div class="elementor elementor-12" data-elementor-id="12" data-elementor-post-type="page" data-elementor-type="wp-page">
 <section class="elementor-section elementor-top-section elementor-element elementor-element-e2472f8 elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="e2472f8" data-settings='{"stretch_section":"section-stretched"}' style="width: 1521px; left: 0px;">
@@ -2478,8 +2495,6 @@ img, video, iframe { max-width: 100%; height: auto; }
 <path d="M783.302 243.246c-69.329-69.387-161.529-107.619-259.763-107.658-202.402 0-367.133 164.668-367.214 367.072-.026 64.699 16.883 127.854 49.017 183.522l-52.096 190.229 194.665-51.047c53.636 29.244 114.022 44.656 175.482 44.682h.151c202.382 0 367.128-164.688 367.21-367.094.039-98.087-38.121-190.319-107.452-259.706zM523.544 808.047h-.125c-54.767-.021-108.483-14.729-155.344-42.529l-11.146-6.612-115.517 30.293 30.834-112.592-7.259-11.544c-30.552-48.579-46.688-104.729-46.664-162.379.066-168.229 136.985-305.096 305.339-305.096 81.521.031 158.154 31.811 215.779 89.482s89.342 134.332 89.312 215.859c-.066 168.243-136.984 305.118-305.209 305.118zm167.415-228.515c-9.177-4.591-54.286-26.782-62.697-29.843-8.41-3.062-14.526-4.592-20.645 4.592-6.115 9.182-23.699 29.843-29.053 35.964-5.352 6.122-10.704 6.888-19.879 2.296-9.176-4.591-38.74-14.277-73.786-45.526-27.275-24.319-45.691-54.359-51.043-63.543-5.352-9.183-.569-14.146 4.024-18.72 4.127-4.109 9.175-10.713 13.763-16.069 4.587-5.355 6.117-9.183 9.175-15.304 3.059-6.122 1.529-11.479-.765-16.07-2.293-4.591-20.644-49.739-28.29-68.104-7.447-17.886-15.013-15.466-20.645-15.747-5.346-.266-11.469-.322-17.585-.322s-16.057 2.295-24.467 11.478-32.113 31.374-32.113 76.521c0 45.147 32.877 88.764 37.465 94.885 4.588 6.122 64.699 98.771 156.741 138.502 21.892 9.45 38.982 15.094 52.308 19.322 21.98 6.979 41.982 5.995 57.793 3.634 17.628-2.633 54.284-22.189 61.932-43.615 7.646-21.427 7.646-39.791 5.352-43.617-2.294-3.826-8.41-6.122-17.585-10.714z" fill="#FFF" style="fill: #FFFFFF;"></path>
 </g>
 </svg></div></div></a>
-
-
 <script>
 				const lazyloadRunObserver = () => {
 					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
@@ -2643,4 +2658,16 @@ document.addEventListener('DOMContentLoaded', function () {
   startAutoplay();
 });
 </script>
-</body></html>
+<script>
+(function(){
+  function ready(fn){ if(document.readyState!=='loading'){fn();} else {document.addEventListener('DOMContentLoaded', fn);} }
+  ready(function(){
+    var btn = document.getElementById('mobileMenuToggle');
+    var panel = document.getElementById('mobileMenuPanel');
+    if(!btn || !panel) return;
+    btn.addEventListener('click', function(){
+      panel.classList.toggle('is-open');
+    });
+  });
+})();
+</script></body></html>
