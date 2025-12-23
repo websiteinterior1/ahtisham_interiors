@@ -967,559 +967,610 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- ai-price-mobile-css -->
 
-<style>
-@media (max-width: 768px) {
-  /* Hide social icons on mobile */
-  .elementor-widget-social-icons {
-    display: none !important;
-  }
 
-  /* Make sure top menu items are easy to tap and visible */
-  .elementor-nav-menu--layout-horizontal.elementor-nav-menu--dropdown,
-  .elementor-nav-menu--main.elementor-nav-menu__container {
-    width: 100%;
-  }
-  .elementor-nav-menu--dropdown .elementor-nav-menu,
-  .elementor-nav-menu--layout-horizontal.elementor-nav-menu--dropdown .elementor-nav-menu {
-    display: block !important;
-  }
-  .elementor-nav-menu a.menu-link,
-  .elementor-nav-menu--dropdown a.menu-link {
-    display: block;
-    padding: 10px 14px;
-  }
-}
-</style>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+@media (max-width:768px){
+  /* hide the old stacked mobile header content (email/call/old menu/text widgets) */
+  section.elementor-element-36273670 > .elementor-container { display:none !important; }
+
+  /* our new mobile header */
+  section.elementor-element-36273670 { padding:0 !important; }
+  section.elementor-element-36273670 .mobile-custom-wrap{ width:100%; }
+
+  .mobile-appt-btn{
+    display:block;
+    width:100%;
+    text-align:center;
+    padding:14px 16px !important;
+    border-radius:0 !important;
+  }
+  .mobile-appt{ position:sticky; top:0; z-index:1000; }
+
+  .mobile-bar{
+    display:grid;
+    grid-template-columns:44px 1fr 70px;
+    align-items:center;
+    gap:10px;
+    padding:12px 14px;
+    background:#fff;
+    border-bottom:1px solid rgba(0,0,0,.08);
+  }
+
+  .mobile-menu-btn{
+    width:44px; height:44px;
+    display:flex; flex-direction:column;
+    justify-content:center; gap:6px;
+    background:transparent; border:0; padding:0; margin:0;
+  }
+  .mobile-menu-btn span{
+    display:block; height:2px; width:22px;
+    background:currentColor; border-radius:2px;
+  }
+
+  .mobile-logo{ justify-self:center; display:flex; align-items:center; }
+  .mobile-logo img{ max-height:42px; width:auto; }
+
+  .mobile-social{ justify-self:end; display:flex; align-items:center; gap:12px; }
+  .mobile-social a{ font-size:18px; line-height:1; }
+
+  .mobile-menu-panel{
+    display:none;
+    padding:10px 14px 18px;
+    background:#fff;
+  }
+  .mobile-menu-panel a{
+    display:block;
+    padding:14px 10px;
+    border-radius:12px;
+    text-align:center;
+    font-weight:600;
+    text-decoration:none;
+  }
+  .mobile-menu-panel a + a{ margin-top:8px; }
+  .mobile-menu-panel.is-open{ display:block; }
+  /* Force custom hamburger (3 bars) visible */
+  .mobile-menu-btn{ color:#000 !important; opacity:1 !important; }
+  .mobile-menu-btn span{ background:#000 !important; opacity:1 !important; }
+
+  /* Force Elementor icon hamburger visible */
+  .elementor-menu-toggle,
+  .elementor-menu-toggle i.eicon-menu-bar,
+  .elementor-menu-toggle i.eicon-close{
+    color:#000 !important;
+    opacity:1 !important;
+    visibility:visible !important;
+  }
+
+}
+</style>
 </head>
 <body>
-<header data-elementor-type="header" data-elementor-id="692" class="elementor elementor-692 elementor-location-header" data-elementor-post-type="elementor_library">
-					<section class="elementor-section elementor-top-section elementor-element elementor-element-45fdca79 elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-phone elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="45fdca79" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7b4efac1" data-id="7b4efac1" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-46dc1bb0 elementor-widget elementor-widget-heading" data-id="46dc1bb0" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">MOBILE HEADER</h2>				</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-36273670 elementor-hidden-desktop elementor-hidden-tablet elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="36273670" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-12 elementor-top-column elementor-element elementor-element-28c45ada" data-id="28c45ada" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-3b3a3603 elementor-view-stacked elementor-shape-circle elementor-widget elementor-widget-icon" data-id="3b3a3603" data-element_type="widget" data-widget_type="icon.default">
-				<div class="elementor-widget-container">
-							<div class="elementor-icon-wrapper">
-			<a class="elementor-icon" href="mailto:ahtishaminterior@gmail.com"><i class="fa-solid fa-envelope"></i> ahtishaminterior@gmail.com</a>
-		</div>
-						</div>
-				</div>
-				<div class="elementor-element elementor-element-f4397c8 elementor-widget elementor-widget-text-editor" data-id="f4397c8" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-									<p style="text-align: center;"><a href="mailto:ahtishaminterior@gmail.com"><i class="fa-solid fa-envelope"></i> ahtishaminterior@gmail.com</a></p>								</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-12 elementor-top-column elementor-element elementor-element-1bd3cdad" data-id="1bd3cdad" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-7a39614 elementor-widget elementor-widget-image" data-id="7a39614" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="index.html">
-							<img width="305" height="150" src="ahtisham_interior_files/log3.png" alt="Ahtisham Interior Footer Logo">								</a>
-															</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-12 elementor-top-column elementor-element elementor-element-7a73f715" data-id="7a73f715" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-25181e3d elementor-view-stacked elementor-shape-circle elementor-widget elementor-widget-icon" data-id="25181e3d" data-element_type="widget" data-widget_type="icon.default">
-				<div class="elementor-widget-container">
-							<div class="elementor-icon-wrapper">
-			<a class="elementor-icon" href="tel:+92-316-1566793">
-			<svg aria-hidden="true" width="1em" height="1em" viewBox="0 0 320 512" style="vertical-align:-.125em;"><path fill="currentColor" d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32h64c0 17.7-14.3 32-32 32zm96-96H64V64h192v320z"/></svg>			</a>
-		</div>
-						</div>
-				</div>
-				<div class="elementor-element elementor-element-1fb17bb elementor-widget elementor-widget-text-editor" data-id="1fb17bb" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-									<p style="text-align: center;"><a href="tel:+92-316-1566793"><strong>call us</strong></a></p>								</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-12 elementor-top-column elementor-element elementor-element-46722ada" data-id="46722ada" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-3de4484 elementor-mobile-align-center elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-button" data-id="3de4484" data-element_type="widget" data-widget_type="button.default">
-				<div class="elementor-widget-container">
-									<div class="elementor-button-wrapper">
-					<a class="elementor-button elementor-button-link elementor-size-sm" href="contact_ahtisham.html">
-						<span class="elementor-button-content-wrapper">
-									<span class="elementor-button-text">Request an appointment online</span>
-					</span>
-					</a>
-				</div>
-								</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-12 elementor-top-column elementor-element elementor-element-6fba828" data-id="6fba828" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-fcb75c3 elementor-widget elementor-widget-text-editor" data-id="fcb75c3" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-									<p style="text-align: center;"><a href="index.html"><strong>Home</strong></a></p>								</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-12 elementor-top-column elementor-element elementor-element-0c44e4a" data-id="0c44e4a" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-9ef885e elementor-widget elementor-widget-text-editor" data-id="9ef885e" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-									<p style="text-align: center;"><a href="index.html"><strong></strong></a><strong><a href="curtains_ahtisham.html">Curtains</a></strong></p>								</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-12 elementor-top-column elementor-element elementor-element-6638f23" data-id="6638f23" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-388fcd4 elementor-widget elementor-widget-text-editor" data-id="388fcd4" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-									<p style="text-align: center;"><strong><a href="blinds_ahtisham.html">Blinds</a></strong></p>								</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-9985209" data-id="9985209" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-67ccd62 elementor-widget elementor-widget-text-editor" data-id="67ccd62" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-									<p style="text-align: center;"><strong><a href="projects_ahtisham.html">Projects</a></strong></p>								</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-12 elementor-top-column elementor-element elementor-element-d2758a7" data-id="d2758a7" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-49f8185 elementor-widget elementor-widget-text-editor" data-id="49f8185" data-element_type="widget" data-widget_type="text-editor.default">
-				<div class="elementor-widget-container">
-									<p style="text-align: center;"><strong><a href="sofas_ahtisham.html">Sofa</a></strong></p>								</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-6e59e74e elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-phone elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6e59e74e" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-26d7842c" data-id="26d7842c" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-290aa479 elementor-widget elementor-widget-heading" data-id="290aa479" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">TABLET HEADER</h2>				</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-203d49c3 elementor-hidden-desktop elementor-hidden-phone elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="203d49c3" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-57051fce" data-id="57051fce" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<section class="elementor-section elementor-inner-section elementor-element elementor-element-6f76fdec elementor-hidden-phone elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6f76fdec" data-element_type="section">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-125884a7" data-id="125884a7" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-102846f2 elementor-widget elementor-widget-image" data-id="102846f2" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="index.html">
-							<img width="300" height="148" src="ahtisham_interior_files/log3-300x148.png" class="attachment-medium size-medium wp-image-796" alt="" srcset="https://www.Ahtisham Interior.pk/wp-content/uploads/2020/09/log3-300x148.png 300w, https://www.Ahtisham Interior.pk/wp-content/uploads/2020/09/log3.png 305w" sizes="(max-width: 300px) 100vw, 300px">								</a>
-															</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-7d88030f" data-id="7d88030f" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-448c372 elementor-view-stacked elementor-shape-circle elementor-widget elementor-widget-icon" data-id="448c372" data-element_type="widget" data-widget_type="icon.default">
-				<div class="elementor-widget-container">
-							<div class="elementor-icon-wrapper">
-			<a class="elementor-icon" href="mailto:ahtishaminterior@gmail.com"><i class="fa-solid fa-envelope"></i> ahtishaminterior@gmail.com</a>
-		</div>
-						</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-778e5e08" data-id="778e5e08" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-6eff2ec3 elementor-view-stacked elementor-shape-circle elementor-widget elementor-widget-icon" data-id="6eff2ec3" data-element_type="widget" data-widget_type="icon.default">
-				<div class="elementor-widget-container">
-							<div class="elementor-icon-wrapper">
-			<a class="elementor-icon" href="tel:+92-316-1566793">
-			<svg aria-hidden="true" width="1em" height="1em" viewBox="0 0 320 512" style="vertical-align:-.125em;"><path fill="currentColor" d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32h64c0 17.7-14.3 32-32 32zm96-96H64V64h192v320z"/></svg>			</a>
-		</div>
-						</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-337b40fd elementor-section-stretched elementor-section-full_width elementor-hidden-phone elementor-section-content-middle elementor-hidden-desktop elementor-section-height-default elementor-section-height-default elementor-sticky elementor-sticky--active elementor-section--handles-inside elementor-sticky--effects" data-id="337b40fd" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;,&quot;sticky&quot;:&quot;top&quot;,&quot;sticky_on&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;],&quot;sticky_offset&quot;:0,&quot;sticky_effects_offset&quot;:0,&quot;sticky_anchor_link_offset&quot;:0}" style="position: fixed; margin-top: 0px; margin-bottom: 0px; top: 0px; width: 1521px; left: 0px;">
-						<div class="elementor-container elementor-column-gap-no">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-68074d53" data-id="68074d53" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-3864491e elementor-nav-menu__align-center elementor-nav-menu--dropdown-mobile elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="3864491e" data-element_type="widget" data-settings="{&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;\&quot; aria-hidden=\&quot;true\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;&quot;},&quot;layout&quot;:&quot;horizontal&quot;,&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
-				<div class="elementor-widget-container">
-								<nav aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-background e--animation-fade">
-				<ul id="menu-1-3864491e" class="elementor-nav-menu" data-smartmenus-id="17621609644792021"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-12 current_page_item menu-item-23"><a href="index.html" aria-current="page" class="elementor-item elementor-item-active menu-link">Home</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-76"><a aria-expanded="false" href="curtains_ahtisham.html" class="elementor-item menu-link has-submenu" id="sm-17621609644792021-1" aria-haspopup="true" aria-controls="sm-17621609644792021-2">Curtains<span class="sub-arrow"><i class="" aria-hidden="true"></i></span></a>
-<ul class="sub-menu elementor-nav-menu--dropdown" id="sm-17621609644792021-2" role="group" aria-hidden="true" aria-labelledby="sm-17621609644792021-1" aria-expanded="false">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-848"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Digital Printed Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Fancy Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Ready to Hang Curtain</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1617"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Blackout Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1618"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Embroidered Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1619"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Jacquard Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1620"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Linen Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1621"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Organza Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1622"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Sheer Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1623"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Silk Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1624"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Velvet Curtains</a></li>
+<header class="elementor elementor-692 elementor-location-header" data-elementor-id="692" data-elementor-post-type="elementor_library" data-elementor-type="header">
+<section class="elementor-section elementor-top-section elementor-element elementor-element-45fdca79 elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-phone elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="45fdca79" data-settings='{"background_background":"classic"}'>
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7b4efac1" data-element_type="column" data-id="7b4efac1">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-46dc1bb0 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="46dc1bb0" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">MOBILE HEADER</h2> </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-36273670 elementor-hidden-desktop elementor-hidden-tablet elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="36273670" data-settings='{"background_background":"classic"}'><div class="mobile-custom-wrap"><div class="mobile-appt"><a class="elementor-button-link elementor-button mobile-appt-btn" href="contact_ahtisham.html"><span class="elementor-button-text">Request an appointment online</span></a></div><div class="mobile-bar"><button aria-label="Menu" class="mobile-menu-btn" id="mobileMenuToggle" type="button"><span></span><span></span><span></span></button><a aria-label="Home" class="mobile-logo" href="index.html"><img alt="Ahtisham Interior Footer Logo" src="ahtisham_interior_files/log3.png"/></a><div class="mobile-social"><a aria-label="Facebook" href="https://www.facebook.com/share/17UBvwDDTs/" rel="noopener" target="_blank"><i class="fa-brands fa-facebook-f"></i></a><a aria-label="Instagram" href="https://www.instagram.com/ahtishaminteriors?igsh=d245MDRoZW1jdGFj" rel="noopener" target="_blank"><i class="fa-brands fa-instagram"></i></a></div></div><div class="mobile-menu-panel" id="mobileMenuPanel"><a href="index.html">Home</a><a href="curtains_ahtisham.html">Curtains</a><a href="blinds_ahtisham.html">Blinds</a><a href="wallpapers_ahtisham.html">WallPapers</a><a href="flooring_ahtisham.html">Flooring</a><a href="pailing_ahtisham.html">Pailing</a><a href="sofas_ahtisham.html">Sofa</a><a href="products_ahtisham.html">Products</a><a href="rods_ahtisham.html">Rods</a><a href="projects_ahtisham.html">Projects</a><a href="about_ahtisham.html">About us</a><a href="contact_ahtisham.html">Contact us</a><a href="blog_ahtisham.html">Blog</a></div></div>
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-12 elementor-top-column elementor-element elementor-element-28c45ada" data-element_type="column" data-id="28c45ada">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-3b3a3603 elementor-view-stacked elementor-shape-circle elementor-widget elementor-widget-icon" data-element_type="widget" data-id="3b3a3603" data-widget_type="icon.default">
+<div class="elementor-widget-container">
+<div class="elementor-icon-wrapper">
+<a class="elementor-icon" href="mailto:ahtishaminterior@gmail.com"><i class="fa-solid fa-envelope"></i> ahtishaminterior@gmail.com</a>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-f4397c8 elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="f4397c8" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<p style="text-align: center;"><a href="mailto:ahtishaminterior@gmail.com"><i class="fa-solid fa-envelope"></i> ahtishaminterior@gmail.com</a></p> </div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-12 elementor-top-column elementor-element elementor-element-1bd3cdad" data-element_type="column" data-id="1bd3cdad">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-7a39614 elementor-widget elementor-widget-image" data-element_type="widget" data-id="7a39614" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<a href="index.html">
+<img alt="Ahtisham Interior Footer Logo" height="150" src="ahtisham_interior_files/log3.png" width="305"/> </a>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-12 elementor-top-column elementor-element elementor-element-7a73f715" data-element_type="column" data-id="7a73f715">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-25181e3d elementor-view-stacked elementor-shape-circle elementor-widget elementor-widget-icon" data-element_type="widget" data-id="25181e3d" data-widget_type="icon.default">
+<div class="elementor-widget-container">
+<div class="elementor-icon-wrapper">
+<a class="elementor-icon" href="tel:+92-316-1566793">
+<svg aria-hidden="true" height="1em" style="vertical-align:-.125em;" viewbox="0 0 320 512" width="1em"><path d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32h64c0 17.7-14.3 32-32 32zm96-96H64V64h192v320z" fill="currentColor"></path></svg> </a>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-1fb17bb elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="1fb17bb" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<p style="text-align: center;"><a href="tel:+92-316-1566793"><strong>call us</strong></a></p> </div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-12 elementor-top-column elementor-element elementor-element-46722ada" data-element_type="column" data-id="46722ada">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-3de4484 elementor-mobile-align-center elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-button" data-element_type="widget" data-id="3de4484" data-widget_type="button.default">
+<div class="elementor-widget-container">
+<div class="elementor-button-wrapper">
+<a class="elementor-button elementor-button-link elementor-size-sm" href="contact_ahtisham.html">
+<span class="elementor-button-content-wrapper">
+<span class="elementor-button-text">Request an appointment online</span>
+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-12 elementor-top-column elementor-element elementor-element-6fba828" data-element_type="column" data-id="6fba828">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-fcb75c3 elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="fcb75c3" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<p style="text-align: center;"><a href="index.html"><strong>Home</strong></a></p> </div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-12 elementor-top-column elementor-element elementor-element-0c44e4a" data-element_type="column" data-id="0c44e4a">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-9ef885e elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="9ef885e" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<p style="text-align: center;"><a href="index.html"><strong></strong></a><strong><a href="curtains_ahtisham.html">Curtains</a></strong></p> </div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-12 elementor-top-column elementor-element elementor-element-6638f23" data-element_type="column" data-id="6638f23">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-388fcd4 elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="388fcd4" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<p style="text-align: center;"><strong><a href="blinds_ahtisham.html">Blinds</a></strong></p> </div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-9985209" data-element_type="column" data-id="9985209">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-67ccd62 elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="67ccd62" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<p style="text-align: center;"><strong><a href="projects_ahtisham.html">Projects</a></strong></p> </div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-12 elementor-top-column elementor-element elementor-element-d2758a7" data-element_type="column" data-id="d2758a7">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-49f8185 elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="49f8185" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<p style="text-align: center;"><strong><a href="sofas_ahtisham.html">Sofa</a></strong></p> </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-6e59e74e elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-phone elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="6e59e74e" data-settings='{"background_background":"classic"}'>
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-26d7842c" data-element_type="column" data-id="26d7842c">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-290aa479 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="290aa479" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">TABLET HEADER</h2> </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-203d49c3 elementor-hidden-desktop elementor-hidden-phone elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="203d49c3" data-settings='{"background_background":"classic"}'>
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-57051fce" data-element_type="column" data-id="57051fce">
+<div class="elementor-widget-wrap elementor-element-populated">
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-6f76fdec elementor-hidden-phone elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="6f76fdec">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-125884a7" data-element_type="column" data-id="125884a7">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-102846f2 elementor-widget elementor-widget-image" data-element_type="widget" data-id="102846f2" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<a href="index.html">
+<img alt="" class="attachment-medium size-medium wp-image-796" height="148" sizes="(max-width: 300px) 100vw, 300px" src="ahtisham_interior_files/log3-300x148.png" srcset="https://www.Ahtisham Interior.pk/wp-content/uploads/2020/09/log3-300x148.png 300w, https://www.Ahtisham Interior.pk/wp-content/uploads/2020/09/log3.png 305w" width="300"/> </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-7d88030f" data-element_type="column" data-id="7d88030f">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-448c372 elementor-view-stacked elementor-shape-circle elementor-widget elementor-widget-icon" data-element_type="widget" data-id="448c372" data-widget_type="icon.default">
+<div class="elementor-widget-container">
+<div class="elementor-icon-wrapper">
+<a class="elementor-icon" href="mailto:ahtishaminterior@gmail.com"><i class="fa-solid fa-envelope"></i> ahtishaminterior@gmail.com</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-778e5e08" data-element_type="column" data-id="778e5e08">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-6eff2ec3 elementor-view-stacked elementor-shape-circle elementor-widget elementor-widget-icon" data-element_type="widget" data-id="6eff2ec3" data-widget_type="icon.default">
+<div class="elementor-widget-container">
+<div class="elementor-icon-wrapper">
+<a class="elementor-icon" href="tel:+92-316-1566793">
+<svg aria-hidden="true" height="1em" style="vertical-align:-.125em;" viewbox="0 0 320 512" width="1em"><path d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32h64c0 17.7-14.3 32-32 32zm96-96H64V64h192v320z" fill="currentColor"></path></svg> </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-337b40fd elementor-section-stretched elementor-section-full_width elementor-hidden-phone elementor-section-content-middle elementor-hidden-desktop elementor-section-height-default elementor-section-height-default elementor-sticky elementor-sticky--active elementor-section--handles-inside elementor-sticky--effects" data-element_type="section" data-id="337b40fd" data-settings='{"stretch_section":"section-stretched","background_background":"classic","sticky":"top","sticky_on":["desktop","tablet","mobile"],"sticky_offset":0,"sticky_effects_offset":0,"sticky_anchor_link_offset":0}' style="position: fixed; margin-top: 0px; margin-bottom: 0px; top: 0px; width: 1521px; left: 0px;">
+<div class="elementor-container elementor-column-gap-no">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-68074d53" data-element_type="column" data-id="68074d53" data-settings='{"background_background":"classic"}'>
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-3864491e elementor-nav-menu__align-center elementor-nav-menu--dropdown-mobile elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-element_type="widget" data-id="3864491e" data-settings='{"submenu_icon":{"value":"&lt;i class=\"\" aria-hidden=\"true\"&gt;&lt;\/i&gt;","library":""},"layout":"horizontal","toggle":"burger"}' data-widget_type="nav-menu.default">
+<div class="elementor-widget-container">
+<nav aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-background e--animation-fade">
+<ul class="elementor-nav-menu" data-smartmenus-id="17621609644792021" id="menu-1-3864491e"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-12 current_page_item menu-item-23"><a aria-current="page" class="elementor-item elementor-item-active menu-link" href="index.html">Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-76"><a aria-controls="sm-17621609644792021-2" aria-expanded="false" aria-haspopup="true" class="elementor-item menu-link has-submenu" href="curtains_ahtisham.html" id="sm-17621609644792021-1">Curtains<span class="sub-arrow"><i aria-hidden="true" class=""></i></span></a>
+<ul aria-expanded="false" aria-hidden="true" aria-labelledby="sm-17621609644792021-1" class="sub-menu elementor-nav-menu--dropdown" id="sm-17621609644792021-2" role="group">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-848"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Digital Printed Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Fancy Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Ready to Hang Curtain</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1617"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Blackout Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1618"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Embroidered Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1619"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Jacquard Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1620"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Linen Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1621"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Organza Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1622"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Sheer Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1623"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Silk Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1624"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Velvet Curtains</a></li>
 </ul>
 </li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-491"><a aria-expanded="false" href="blinds_ahtisham.html" class="elementor-item menu-link has-submenu" id="sm-17621609644792021-3" aria-haspopup="true" aria-controls="sm-17621609644792021-4">Blinds<span class="sub-arrow"><i class="" aria-hidden="true"></i></span></a>
-<ul class="sub-menu elementor-nav-menu--dropdown" id="sm-17621609644792021-4" role="group" aria-hidden="true" aria-labelledby="sm-17621609644792021-3" aria-expanded="false">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-586"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link">Chick Blinds</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-492"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link">Roller Blinds</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-493"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link">Roman Blinds</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-646"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link">Venetian Blinds</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-494"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link">Wooden Blinds</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-495"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link">Zebra Roller Blind</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-491"><a aria-controls="sm-17621609644792021-4" aria-expanded="false" aria-haspopup="true" class="elementor-item menu-link has-submenu" href="blinds_ahtisham.html" id="sm-17621609644792021-3">Blinds<span class="sub-arrow"><i aria-hidden="true" class=""></i></span></a>
+<ul aria-expanded="false" aria-hidden="true" aria-labelledby="sm-17621609644792021-3" class="sub-menu elementor-nav-menu--dropdown" id="sm-17621609644792021-4" role="group">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-586"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html">Chick Blinds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-492"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html">Roller Blinds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-493"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html">Roman Blinds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-646"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html">Venetian Blinds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-494"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html">Wooden Blinds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-495"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html">Zebra Roller Blind</a></li>
 </ul>
 </li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1360"><a href="wallpapers_ahtisham.html" class="elementor-item menu-link">WallPapers</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1359"><a href="flooring_ahtisham.html" class="elementor-item menu-link">Flooring</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1358"><a href="pailing_ahtisham.html" class="elementor-item menu-link">Pailing</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-552"><a href="sofas_ahtisham.html" class="elementor-item menu-link">Sofa</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26"><a href="products_ahtisham.html" class="elementor-item menu-link">Products</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="rods_ahtisham.html" class="elementor-item menu-link">Rods</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-819"><a href="projects_ahtisham.html" class="elementor-item menu-link">Projects</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a href="about_ahtisham.html" class="elementor-item menu-link">About us</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="contact_ahtisham.html" class="elementor-item menu-link">Contact us</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1072"><a href="blog_ahtisham.html" class="elementor-item menu-link">Blog</a></li>
-</ul>			</nav>
-					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
-			<i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open eicon-menu-bar"></i><i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close eicon-close"></i>		</div>
-					<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true" style="--menu-height: 0;">
-				<ul id="menu-2-3864491e" class="elementor-nav-menu" data-smartmenus-id="17621609644825168"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-12 current_page_item menu-item-23"><a href="index.html" aria-current="page" class="elementor-item elementor-item-active menu-link" tabindex="-1">Home</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-76"><a aria-expanded="false" href="curtains_ahtisham.html" class="elementor-item menu-link has-submenu" tabindex="-1" id="sm-17621609644825168-1" aria-haspopup="true" aria-controls="sm-17621609644825168-2">Curtains<span class="sub-arrow"><i class="" aria-hidden="true"></i></span></a>
-<ul class="sub-menu elementor-nav-menu--dropdown" id="sm-17621609644825168-2" role="group" aria-hidden="true" aria-labelledby="sm-17621609644825168-1" aria-expanded="false">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-848"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Digital Printed Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Fancy Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Ready to Hang Curtain</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1617"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Blackout Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1618"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Embroidered Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1619"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Jacquard Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1620"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Linen Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1621"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Organza Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1622"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Sheer Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1623"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Silk Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1624"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Velvet Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1360"><a class="elementor-item menu-link" href="wallpapers_ahtisham.html">WallPapers</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1359"><a class="elementor-item menu-link" href="flooring_ahtisham.html">Flooring</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1358"><a class="elementor-item menu-link" href="pailing_ahtisham.html">Pailing</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-552"><a class="elementor-item menu-link" href="sofas_ahtisham.html">Sofa</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26"><a class="elementor-item menu-link" href="products_ahtisham.html">Products</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a class="elementor-item menu-link" href="rods_ahtisham.html">Rods</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-819"><a class="elementor-item menu-link" href="projects_ahtisham.html">Projects</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a class="elementor-item menu-link" href="about_ahtisham.html">About us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a class="elementor-item menu-link" href="contact_ahtisham.html">Contact us</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1072"><a class="elementor-item menu-link" href="blog_ahtisham.html">Blog</a></li>
+</ul> </nav>
+<div aria-expanded="false" aria-label="Menu Toggle" class="elementor-menu-toggle" role="button" tabindex="0">
+<i aria-hidden="true" class="elementor-menu-toggle__icon--open eicon-menu-bar" role="presentation"></i><i aria-hidden="true" class="elementor-menu-toggle__icon--close eicon-close" role="presentation"></i> </div>
+<nav aria-hidden="true" class="elementor-nav-menu--dropdown elementor-nav-menu__container" style="--menu-height: 0;">
+<ul class="elementor-nav-menu" data-smartmenus-id="17621609644825168" id="menu-2-3864491e"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-12 current_page_item menu-item-23"><a aria-current="page" class="elementor-item elementor-item-active menu-link" href="index.html" tabindex="-1">Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-76"><a aria-controls="sm-17621609644825168-2" aria-expanded="false" aria-haspopup="true" class="elementor-item menu-link has-submenu" href="curtains_ahtisham.html" id="sm-17621609644825168-1" tabindex="-1">Curtains<span class="sub-arrow"><i aria-hidden="true" class=""></i></span></a>
+<ul aria-expanded="false" aria-hidden="true" aria-labelledby="sm-17621609644825168-1" class="sub-menu elementor-nav-menu--dropdown" id="sm-17621609644825168-2" role="group">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-848"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Digital Printed Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Fancy Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Ready to Hang Curtain</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1617"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Blackout Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1618"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Embroidered Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1619"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Jacquard Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1620"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Linen Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1621"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Organza Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1622"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Sheer Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1623"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Silk Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1624"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Velvet Curtains</a></li>
 </ul>
 </li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-491"><a aria-expanded="false" href="blinds_ahtisham.html" class="elementor-item menu-link has-submenu" tabindex="-1" id="sm-17621609644825168-3" aria-haspopup="true" aria-controls="sm-17621609644825168-4">Blinds<span class="sub-arrow"><i class="" aria-hidden="true"></i></span></a>
-<ul class="sub-menu elementor-nav-menu--dropdown" id="sm-17621609644825168-4" role="group" aria-hidden="true" aria-labelledby="sm-17621609644825168-3" aria-expanded="false">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-586"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Chick Blinds</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-492"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Roller Blinds</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-493"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Roman Blinds</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-646"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Venetian Blinds</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-494"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Wooden Blinds</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-495"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Zebra Roller Blind</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-491"><a aria-controls="sm-17621609644825168-4" aria-expanded="false" aria-haspopup="true" class="elementor-item menu-link has-submenu" href="blinds_ahtisham.html" id="sm-17621609644825168-3" tabindex="-1">Blinds<span class="sub-arrow"><i aria-hidden="true" class=""></i></span></a>
+<ul aria-expanded="false" aria-hidden="true" aria-labelledby="sm-17621609644825168-3" class="sub-menu elementor-nav-menu--dropdown" id="sm-17621609644825168-4" role="group">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-586"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html" tabindex="-1">Chick Blinds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-492"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html" tabindex="-1">Roller Blinds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-493"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html" tabindex="-1">Roman Blinds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-646"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html" tabindex="-1">Venetian Blinds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-494"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html" tabindex="-1">Wooden Blinds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-495"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html" tabindex="-1">Zebra Roller Blind</a></li>
 </ul>
 </li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1360"><a href="wallpapers_ahtisham.html" class="elementor-item menu-link" tabindex="-1">WallPapers</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1359"><a href="flooring_ahtisham.html" class="elementor-item menu-link" tabindex="-1">Flooring</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1358"><a href="pailing_ahtisham.html" class="elementor-item menu-link" tabindex="-1">Pailing</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-552"><a href="sofas_ahtisham.html" class="elementor-item menu-link" tabindex="-1">Sofa</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26"><a href="products_ahtisham.html" class="elementor-item menu-link" tabindex="-1">Products</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="rods_ahtisham.html" class="elementor-item menu-link">Rods</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-819"><a href="projects_ahtisham.html" class="elementor-item menu-link" tabindex="-1">Projects</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a href="about_ahtisham.html" class="elementor-item menu-link" tabindex="-1">About us</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="contact_ahtisham.html" class="elementor-item menu-link" tabindex="-1">Contact us</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1072"><a href="blog_ahtisham.html" class="elementor-item menu-link" tabindex="-1">Blog</a></li>
-</ul>			</nav>
-						</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section><section class="elementor-section elementor-top-section elementor-element elementor-element-337b40fd elementor-section-stretched elementor-section-full_width elementor-hidden-phone elementor-section-content-middle elementor-hidden-desktop elementor-section-height-default elementor-section-height-default elementor-sticky elementor-sticky__spacer" data-id="337b40fd" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;,&quot;sticky&quot;:&quot;top&quot;,&quot;sticky_on&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;],&quot;sticky_offset&quot;:0,&quot;sticky_effects_offset&quot;:0,&quot;sticky_anchor_link_offset&quot;:0}" style="visibility: hidden; transition: none; animation: auto ease 0s 1 normal none running none;">
-						<div class="elementor-container elementor-column-gap-no">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-68074d53" data-id="68074d53" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-3864491e elementor-nav-menu__align-center elementor-nav-menu--dropdown-mobile elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="3864491e" data-element_type="widget" data-settings="{&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;\&quot; aria-hidden=\&quot;true\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;&quot;},&quot;layout&quot;:&quot;horizontal&quot;,&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
-				<div class="elementor-widget-container">
-								<nav aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-background e--animation-fade">
-				<ul id="menu-1-3864491e" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-12 current_page_item menu-item-23"><a href="index.html" aria-current="page" class="elementor-item elementor-item-active menu-link">Home</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-76"><a aria-expanded="false" href="curtains_ahtisham.html" class="elementor-item menu-link">Curtains</a>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1360"><a class="elementor-item menu-link" href="wallpapers_ahtisham.html" tabindex="-1">WallPapers</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1359"><a class="elementor-item menu-link" href="flooring_ahtisham.html" tabindex="-1">Flooring</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1358"><a class="elementor-item menu-link" href="pailing_ahtisham.html" tabindex="-1">Pailing</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-552"><a class="elementor-item menu-link" href="sofas_ahtisham.html" tabindex="-1">Sofa</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26"><a class="elementor-item menu-link" href="products_ahtisham.html" tabindex="-1">Products</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a class="elementor-item menu-link" href="rods_ahtisham.html">Rods</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-819"><a class="elementor-item menu-link" href="projects_ahtisham.html" tabindex="-1">Projects</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a class="elementor-item menu-link" href="about_ahtisham.html" tabindex="-1">About us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a class="elementor-item menu-link" href="contact_ahtisham.html" tabindex="-1">Contact us</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1072"><a class="elementor-item menu-link" href="blog_ahtisham.html" tabindex="-1">Blog</a></li>
+</ul> </nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section class="elementor-section elementor-top-section elementor-element elementor-element-337b40fd elementor-section-stretched elementor-section-full_width elementor-hidden-phone elementor-section-content-middle elementor-hidden-desktop elementor-section-height-default elementor-section-height-default elementor-sticky elementor-sticky__spacer" data-element_type="section" data-id="337b40fd" data-settings='{"stretch_section":"section-stretched","background_background":"classic","sticky":"top","sticky_on":["desktop","tablet","mobile"],"sticky_offset":0,"sticky_effects_offset":0,"sticky_anchor_link_offset":0}' style="visibility: hidden; transition: none; animation: auto ease 0s 1 normal none running none;">
+<div class="elementor-container elementor-column-gap-no">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-68074d53" data-element_type="column" data-id="68074d53" data-settings='{"background_background":"classic"}'>
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-3864491e elementor-nav-menu__align-center elementor-nav-menu--dropdown-mobile elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-element_type="widget" data-id="3864491e" data-settings='{"submenu_icon":{"value":"&lt;i class=\"\" aria-hidden=\"true\"&gt;&lt;\/i&gt;","library":""},"layout":"horizontal","toggle":"burger"}' data-widget_type="nav-menu.default">
+<div class="elementor-widget-container">
+<nav aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-background e--animation-fade">
+<ul class="elementor-nav-menu" id="menu-1-3864491e"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-12 current_page_item menu-item-23"><a aria-current="page" class="elementor-item elementor-item-active menu-link" href="index.html">Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-76"><a aria-expanded="false" class="elementor-item menu-link" href="curtains_ahtisham.html">Curtains</a>
 <ul class="sub-menu elementor-nav-menu--dropdown">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-848"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Digital Printed Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Fancy Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Ready to Hang Curtain</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1617"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Blackout Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1618"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Embroidered Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1619"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Jacquard Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1620"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Linen Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1621"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Organza Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1622"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Sheer Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1623"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Silk Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1624"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Velvet Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-848"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Digital Printed Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Fancy Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Ready to Hang Curtain</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1617"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Blackout Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1618"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Embroidered Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1619"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Jacquard Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1620"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Linen Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1621"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Organza Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1622"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Sheer Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1623"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Silk Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1624"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Velvet Curtains</a></li>
 </ul>
 </li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-491"><a aria-expanded="false" href="blinds_ahtisham.html" class="elementor-item menu-link">Blinds</a>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-491"><a aria-expanded="false" class="elementor-item menu-link" href="blinds_ahtisham.html">Blinds</a>
 <ul class="sub-menu elementor-nav-menu--dropdown">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-586"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link">Chick Blinds</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-492"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link">Roller Blinds</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-493"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link">Roman Blinds</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-646"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link">Venetian Blinds</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-494"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link">Wooden Blinds</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-495"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link">Zebra Roller Blind</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-586"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html">Chick Blinds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-492"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html">Roller Blinds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-493"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html">Roman Blinds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-646"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html">Venetian Blinds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-494"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html">Wooden Blinds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-495"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html">Zebra Roller Blind</a></li>
 </ul>
 </li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1360"><a href="wallpapers_ahtisham.html" class="elementor-item menu-link">WallPapers</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1359"><a href="flooring_ahtisham.html" class="elementor-item menu-link">Flooring</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1358"><a href="pailing_ahtisham.html" class="elementor-item menu-link">Pailing</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-552"><a href="sofas_ahtisham.html" class="elementor-item menu-link">Sofa</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26"><a href="products_ahtisham.html" class="elementor-item menu-link">Products</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="rods_ahtisham.html" class="elementor-item menu-link">Rods</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-819"><a href="projects_ahtisham.html" class="elementor-item menu-link">Projects</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a href="about_ahtisham.html" class="elementor-item menu-link">About us</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="contact_ahtisham.html" class="elementor-item menu-link">Contact us</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1072"><a href="blog_ahtisham.html" class="elementor-item menu-link">Blog</a></li>
-</ul>			</nav>
-					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
-			<i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open eicon-menu-bar"></i><i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close eicon-close"></i>		</div>
-					<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
-				<ul id="menu-2-3864491e" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-12 current_page_item menu-item-23"><a href="index.html" aria-current="page" class="elementor-item elementor-item-active menu-link" tabindex="-1">Home</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-76"><a aria-expanded="false" href="curtains_ahtisham.html" class="elementor-item menu-link" tabindex="-1">Curtains</a>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1360"><a class="elementor-item menu-link" href="wallpapers_ahtisham.html">WallPapers</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1359"><a class="elementor-item menu-link" href="flooring_ahtisham.html">Flooring</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1358"><a class="elementor-item menu-link" href="pailing_ahtisham.html">Pailing</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-552"><a class="elementor-item menu-link" href="sofas_ahtisham.html">Sofa</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26"><a class="elementor-item menu-link" href="products_ahtisham.html">Products</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a class="elementor-item menu-link" href="rods_ahtisham.html">Rods</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-819"><a class="elementor-item menu-link" href="projects_ahtisham.html">Projects</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a class="elementor-item menu-link" href="about_ahtisham.html">About us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a class="elementor-item menu-link" href="contact_ahtisham.html">Contact us</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1072"><a class="elementor-item menu-link" href="blog_ahtisham.html">Blog</a></li>
+</ul> </nav>
+<div aria-expanded="false" aria-label="Menu Toggle" class="elementor-menu-toggle" role="button" tabindex="0">
+<i aria-hidden="true" class="elementor-menu-toggle__icon--open eicon-menu-bar" role="presentation"></i><i aria-hidden="true" class="elementor-menu-toggle__icon--close eicon-close" role="presentation"></i> </div>
+<nav aria-hidden="true" class="elementor-nav-menu--dropdown elementor-nav-menu__container">
+<ul class="elementor-nav-menu" id="menu-2-3864491e"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-12 current_page_item menu-item-23"><a aria-current="page" class="elementor-item elementor-item-active menu-link" href="index.html" tabindex="-1">Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-76"><a aria-expanded="false" class="elementor-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Curtains</a>
 <ul class="sub-menu elementor-nav-menu--dropdown">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-848"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Digital Printed Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Fancy Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Ready to Hang Curtain</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1617"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Blackout Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1618"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Embroidered Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1619"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Jacquard Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1620"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Linen Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1621"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Organza Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1622"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Sheer Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1623"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Silk Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1624"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Velvet Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-848"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Digital Printed Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Fancy Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Ready to Hang Curtain</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1617"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Blackout Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1618"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Embroidered Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1619"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Jacquard Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1620"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Linen Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1621"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Organza Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1622"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Sheer Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1623"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Silk Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1624"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Velvet Curtains</a></li>
 </ul>
 </li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-491"><a aria-expanded="false" href="blinds_ahtisham.html" class="elementor-item menu-link" tabindex="-1">Blinds</a>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-491"><a aria-expanded="false" class="elementor-item menu-link" href="blinds_ahtisham.html" tabindex="-1">Blinds</a>
 <ul class="sub-menu elementor-nav-menu--dropdown">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-586"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Chick Blinds</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-492"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Roller Blinds</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-493"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Roman Blinds</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-646"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Venetian Blinds</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-494"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Wooden Blinds</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-495"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Zebra Roller Blind</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-586"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html" tabindex="-1">Chick Blinds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-492"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html" tabindex="-1">Roller Blinds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-493"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html" tabindex="-1">Roman Blinds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-646"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html" tabindex="-1">Venetian Blinds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-494"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html" tabindex="-1">Wooden Blinds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-495"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html" tabindex="-1">Zebra Roller Blind</a></li>
 </ul>
 </li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1360"><a href="wallpapers_ahtisham.html" class="elementor-item menu-link" tabindex="-1">WallPapers</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1359"><a href="flooring_ahtisham.html" class="elementor-item menu-link" tabindex="-1">Flooring</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1358"><a href="pailing_ahtisham.html" class="elementor-item menu-link" tabindex="-1">Pailing</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-552"><a href="sofas_ahtisham.html" class="elementor-item menu-link" tabindex="-1">Sofa</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26"><a href="products_ahtisham.html" class="elementor-item menu-link" tabindex="-1">Products</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="rods_ahtisham.html" class="elementor-item menu-link">Rods</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-819"><a href="projects_ahtisham.html" class="elementor-item menu-link" tabindex="-1">Projects</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a href="about_ahtisham.html" class="elementor-item menu-link" tabindex="-1">About us</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="contact_ahtisham.html" class="elementor-item menu-link" tabindex="-1">Contact us</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1072"><a href="blog_ahtisham.html" class="elementor-item menu-link" tabindex="-1">Blog</a></li>
-</ul>			</nav>
-						</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-739f6f03 elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-phone elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="739f6f03" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-37fb2c69" data-id="37fb2c69" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-793abda8 elementor-widget elementor-widget-heading" data-id="793abda8" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">DESKTOP HEADER NEW</h2>				</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-426d21d8 elementor-section-content-middle elementor-hidden-tablet elementor-hidden-phone elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="426d21d8" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-						<div class="elementor-container elementor-column-gap-no">
-					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-24924f5a" data-id="24924f5a" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-322f3b8c elementor-icon-list--layout-inline elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="322f3b8c" data-element_type="widget" data-widget_type="icon-list.default">
-				<div class="elementor-widget-container">
-							<ul class="elementor-icon-list-items elementor-inline-items">
-							<li class="elementor-icon-list-item elementor-inline-item">
-											<a href="mailto:ahtishaminterior@gmail.com"><i class="fa-solid fa-envelope"></i> ahtishaminterior@gmail.com</a>
-									</li>
-								<li class="elementor-icon-list-item elementor-inline-item">
-											<a href="mailto:">
-
-												<span class="elementor-icon-list-icon">
-							<svg aria-hidden="true" width="1em" height="1em" viewBox="0 0 512 512" style="vertical-align:-.125em;"><path fill="currentColor" d="M497.4 361.8l-104-45.1c-11.3-4.9-24.5-1.7-32.1 7.9l-45.3 55.5c-70.6-36.1-127.7-93.2-163.8-163.8l55.5-45.3c9.6-7.6 12.8-20.7 7.9-32.1l-45.1-104C164.8 24.5 150.4 16 135 16H80C62.3 16 48 30.3 48 48c0 230.4 185.6 416 416 416 17.7 0 32-14.3 32-32v-55c0-15.4-8.5-29.8-21.6-35.2z"/></svg>						</span>
-										<span class="elementor-icon-list-text">+92-316-1566793</span>
-											</a>
-									</li>
-								<li class="elementor-icon-list-item elementor-inline-item">
-											<a href="tel:">
-
-												<span class="elementor-icon-list-icon">
-							<svg aria-hidden="true" width="1em" height="1em" viewBox="0 0 320 512" style="vertical-align:-.125em;"><path fill="currentColor" d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32h64c0 17.7-14.3 32-32 32zm96-96H64V64h192v320z"/></svg>						</span>
-										<span class="elementor-icon-list-text">+92-313-5245829</span>
-											</a>
-									</li>
-						</ul>
-						</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-1c62321" data-id="1c62321" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-72853fb elementor-widget elementor-widget-button" data-id="72853fb" data-element_type="widget" data-widget_type="button.default">
-				<div class="elementor-widget-container">
-									<div class="elementor-button-wrapper">
-					<a class="elementor-button elementor-button-link elementor-size-sm" href="contact_ahtisham.html">
-						<span class="elementor-button-content-wrapper">
-									<span class="elementor-button-text">Request an appointment online</span>
-					</span>
-					</a>
-				</div>
-								</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-42de3bde" data-id="42de3bde" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-58979c79 e-grid-align-right elementor-shape-rounded elementor-grid-0 elementor-widget elementor-widget-social-icons" data-id="58979c79" data-element_type="widget" data-widget_type="social-icons.default">
-				<div class="elementor-widget-container">
-							<div class="elementor-social-icons-wrapper elementor-grid" role="list">
-							<span class="elementor-grid-item" role="listitem">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-animation-bounce-in elementor-repeater-item-4699640" href="https://www.facebook.com/share/17UBvwDDTs/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-				</span>
-							<span class="elementor-grid-item" role="listitem">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-animation-bounce-in elementor-repeater-item-7258cb8" href="https://www.instagram.com/ahtishaminteriors?igsh=d245MDRoZW1jdGFj" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-				</span>
-					</div>
-						</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				<section class="elementor-section elementor-top-section elementor-element elementor-element-137382d8 elementor-hidden-tablet elementor-hidden-phone elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="137382d8" data-element_type="section" data-settings="{&quot;sticky&quot;:&quot;top&quot;,&quot;background_background&quot;:&quot;classic&quot;,&quot;sticky_on&quot;:[],&quot;sticky_offset&quot;:0,&quot;sticky_effects_offset&quot;:0,&quot;sticky_anchor_link_offset&quot;:0}">
-						<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-2255188e" data-id="2255188e" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-70767d61 elementor-widget elementor-widget-image" data-id="70767d61" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-																<a href="index.html">
-							<img width="305" height="150" src="ahtisham_interior_files/log3.png" alt="Ahtisham Interior Footer Logo">								</a>
-															</div>
-				</div>
-					</div>
-		</div>
-				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-4aed6f00" data-id="4aed6f00" data-element_type="column">
-			<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-52182ae1 elementor-nav-menu__align-center elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="52182ae1" data-element_type="widget" data-settings="{&quot;layout&quot;:&quot;horizontal&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;fas fa-caret-down\&quot; aria-hidden=\&quot;true\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
-				<div class="elementor-widget-container">
-								<nav aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-fade">
-				<ul id="menu-1-52182ae1" class="elementor-nav-menu" data-smartmenus-id="17621609644846333"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-12 current_page_item menu-item-23"><a href="index.html" aria-current="page" class="elementor-item elementor-item-active menu-link">Home</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-76"><a aria-expanded="false" href="curtains_ahtisham.html" class="elementor-item menu-link has-submenu" id="sm-17621609644846333-1" aria-haspopup="true" aria-controls="sm-17621609644846333-2">Curtains<span class="sub-arrow"><i class="fas fa-caret-down" aria-hidden="true"></i></span></a>
-<ul class="sub-menu elementor-nav-menu--dropdown" id="sm-17621609644846333-2" role="group" aria-hidden="true" aria-labelledby="sm-17621609644846333-1" aria-expanded="false">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-848"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Digital Printed Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Fancy Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Ready to Hang Curtain</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1617"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Blackout Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1618"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Embroidered Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1619"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Jacquard Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1620"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Linen Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1621"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Organza Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1622"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Sheer Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1623"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Silk Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1624"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link">Velvet Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1360"><a class="elementor-item menu-link" href="wallpapers_ahtisham.html" tabindex="-1">WallPapers</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1359"><a class="elementor-item menu-link" href="flooring_ahtisham.html" tabindex="-1">Flooring</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1358"><a class="elementor-item menu-link" href="pailing_ahtisham.html" tabindex="-1">Pailing</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-552"><a class="elementor-item menu-link" href="sofas_ahtisham.html" tabindex="-1">Sofa</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26"><a class="elementor-item menu-link" href="products_ahtisham.html" tabindex="-1">Products</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a class="elementor-item menu-link" href="rods_ahtisham.html">Rods</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-819"><a class="elementor-item menu-link" href="projects_ahtisham.html" tabindex="-1">Projects</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a class="elementor-item menu-link" href="about_ahtisham.html" tabindex="-1">About us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a class="elementor-item menu-link" href="contact_ahtisham.html" tabindex="-1">Contact us</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1072"><a class="elementor-item menu-link" href="blog_ahtisham.html" tabindex="-1">Blog</a></li>
+</ul> </nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-739f6f03 elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-phone elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="739f6f03" data-settings='{"background_background":"classic"}'>
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-37fb2c69" data-element_type="column" data-id="37fb2c69">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-793abda8 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="793abda8" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">DESKTOP HEADER NEW</h2> </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-426d21d8 elementor-section-content-middle elementor-hidden-tablet elementor-hidden-phone elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="426d21d8" data-settings='{"background_background":"classic"}'>
+<div class="elementor-container elementor-column-gap-no">
+<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-24924f5a" data-element_type="column" data-id="24924f5a">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-322f3b8c elementor-icon-list--layout-inline elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-element_type="widget" data-id="322f3b8c" data-widget_type="icon-list.default">
+<div class="elementor-widget-container">
+<ul class="elementor-icon-list-items elementor-inline-items">
+<li class="elementor-icon-list-item elementor-inline-item">
+<a href="mailto:ahtishaminterior@gmail.com"><i class="fa-solid fa-envelope"></i> ahtishaminterior@gmail.com</a>
+</li>
+<li class="elementor-icon-list-item elementor-inline-item">
+<a href="mailto:">
+<span class="elementor-icon-list-icon">
+<svg aria-hidden="true" height="1em" style="vertical-align:-.125em;" viewbox="0 0 512 512" width="1em"><path d="M497.4 361.8l-104-45.1c-11.3-4.9-24.5-1.7-32.1 7.9l-45.3 55.5c-70.6-36.1-127.7-93.2-163.8-163.8l55.5-45.3c9.6-7.6 12.8-20.7 7.9-32.1l-45.1-104C164.8 24.5 150.4 16 135 16H80C62.3 16 48 30.3 48 48c0 230.4 185.6 416 416 416 17.7 0 32-14.3 32-32v-55c0-15.4-8.5-29.8-21.6-35.2z" fill="currentColor"></path></svg> </span>
+<span class="elementor-icon-list-text">+92-316-1566793</span>
+</a>
+</li>
+<li class="elementor-icon-list-item elementor-inline-item">
+<a href="tel:">
+<span class="elementor-icon-list-icon">
+<svg aria-hidden="true" height="1em" style="vertical-align:-.125em;" viewbox="0 0 320 512" width="1em"><path d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32h64c0 17.7-14.3 32-32 32zm96-96H64V64h192v320z" fill="currentColor"></path></svg> </span>
+<span class="elementor-icon-list-text">+92-313-5245829</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-1c62321" data-element_type="column" data-id="1c62321">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-72853fb elementor-widget elementor-widget-button" data-element_type="widget" data-id="72853fb" data-widget_type="button.default">
+<div class="elementor-widget-container">
+<div class="elementor-button-wrapper">
+<a class="elementor-button elementor-button-link elementor-size-sm" href="contact_ahtisham.html">
+<span class="elementor-button-content-wrapper">
+<span class="elementor-button-text">Request an appointment online</span>
+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-42de3bde" data-element_type="column" data-id="42de3bde">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-58979c79 e-grid-align-right elementor-shape-rounded elementor-grid-0 elementor-widget elementor-widget-social-icons" data-element_type="widget" data-id="58979c79" data-widget_type="social-icons.default">
+<div class="elementor-widget-container">
+<div class="elementor-social-icons-wrapper elementor-grid" role="list">
+<span class="elementor-grid-item" role="listitem">
+<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-animation-bounce-in elementor-repeater-item-4699640" href="https://www.facebook.com/share/17UBvwDDTs/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+</span>
+<span class="elementor-grid-item" role="listitem">
+<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-animation-bounce-in elementor-repeater-item-7258cb8" href="https://www.instagram.com/ahtishaminteriors?igsh=d245MDRoZW1jdGFj" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-137382d8 elementor-hidden-tablet elementor-hidden-phone elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-element_type="section" data-id="137382d8" data-settings='{"sticky":"top","background_background":"classic","sticky_on":[],"sticky_offset":0,"sticky_effects_offset":0,"sticky_anchor_link_offset":0}'>
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-2255188e" data-element_type="column" data-id="2255188e">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-70767d61 elementor-widget elementor-widget-image" data-element_type="widget" data-id="70767d61" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<a href="index.html">
+<img alt="Ahtisham Interior Footer Logo" height="150" src="ahtisham_interior_files/log3.png" width="305"/> </a>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-4aed6f00" data-element_type="column" data-id="4aed6f00">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-52182ae1 elementor-nav-menu__align-center elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-element_type="widget" data-id="52182ae1" data-settings='{"layout":"horizontal","submenu_icon":{"value":"&lt;i class=\"fas fa-caret-down\" aria-hidden=\"true\"&gt;&lt;\/i&gt;","library":"fa-solid"},"toggle":"burger"}' data-widget_type="nav-menu.default">
+<div class="elementor-widget-container">
+<nav aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-fade">
+<ul class="elementor-nav-menu" data-smartmenus-id="17621609644846333" id="menu-1-52182ae1"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-12 current_page_item menu-item-23"><a aria-current="page" class="elementor-item elementor-item-active menu-link" href="index.html">Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-76"><a aria-controls="sm-17621609644846333-2" aria-expanded="false" aria-haspopup="true" class="elementor-item menu-link has-submenu" href="curtains_ahtisham.html" id="sm-17621609644846333-1">Curtains<span class="sub-arrow"><i aria-hidden="true" class="fas fa-caret-down"></i></span></a>
+<ul aria-expanded="false" aria-hidden="true" aria-labelledby="sm-17621609644846333-1" class="sub-menu elementor-nav-menu--dropdown" id="sm-17621609644846333-2" role="group">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-848"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Digital Printed Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Fancy Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Ready to Hang Curtain</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1617"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Blackout Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1618"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Embroidered Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1619"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Jacquard Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1620"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Linen Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1621"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Organza Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1622"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Sheer Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1623"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Silk Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1624"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html">Velvet Curtains</a></li>
 </ul>
 </li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-491"><a aria-expanded="false" href="blinds_ahtisham.html" class="elementor-item menu-link has-submenu" id="sm-17621609644846333-3" aria-haspopup="true" aria-controls="sm-17621609644846333-4">Blinds<span class="sub-arrow"><i class="fas fa-caret-down" aria-hidden="true"></i></span></a>
-<ul class="sub-menu elementor-nav-menu--dropdown" id="sm-17621609644846333-4" role="group" aria-hidden="true" aria-labelledby="sm-17621609644846333-3" aria-expanded="false">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-586"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link">Chick Blinds</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-492"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link">Roller Blinds</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-493"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link">Roman Blinds</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-646"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link">Venetian Blinds</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-494"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link">Wooden Blinds</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-495"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link">Zebra Roller Blind</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-491"><a aria-controls="sm-17621609644846333-4" aria-expanded="false" aria-haspopup="true" class="elementor-item menu-link has-submenu" href="blinds_ahtisham.html" id="sm-17621609644846333-3">Blinds<span class="sub-arrow"><i aria-hidden="true" class="fas fa-caret-down"></i></span></a>
+<ul aria-expanded="false" aria-hidden="true" aria-labelledby="sm-17621609644846333-3" class="sub-menu elementor-nav-menu--dropdown" id="sm-17621609644846333-4" role="group">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-586"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html">Chick Blinds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-492"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html">Roller Blinds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-493"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html">Roman Blinds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-646"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html">Venetian Blinds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-494"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html">Wooden Blinds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-495"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html">Zebra Roller Blind</a></li>
 </ul>
 </li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1360"><a href="wallpapers_ahtisham.html" class="elementor-item menu-link">WallPapers</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1359"><a href="flooring_ahtisham.html" class="elementor-item menu-link">Flooring</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1358"><a href="pailing_ahtisham.html" class="elementor-item menu-link">Pailing</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-552"><a href="sofas_ahtisham.html" class="elementor-item menu-link">Sofa</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26"><a href="products_ahtisham.html" class="elementor-item menu-link">Products</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="rods_ahtisham.html" class="elementor-item menu-link">Rods</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-819"><a href="projects_ahtisham.html" class="elementor-item menu-link">Projects</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a href="about_ahtisham.html" class="elementor-item menu-link">About us</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="contact_ahtisham.html" class="elementor-item menu-link">Contact us</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1072"><a href="blog_ahtisham.html" class="elementor-item menu-link">Blog</a></li>
-</ul>			</nav>
-					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
-			<i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open eicon-menu-bar"></i><i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close eicon-close"></i>		</div>
-					<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true" style="--menu-height: 0;">
-				<ul id="menu-2-52182ae1" class="elementor-nav-menu" data-smartmenus-id="1762160964485964"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-12 current_page_item menu-item-23"><a href="index.html" aria-current="page" class="elementor-item elementor-item-active menu-link" tabindex="-1">Home</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-76"><a aria-expanded="false" href="curtains_ahtisham.html" class="elementor-item menu-link has-submenu" tabindex="-1" id="sm-1762160964485964-1" aria-haspopup="true" aria-controls="sm-1762160964485964-2">Curtains<span class="sub-arrow"><i class="fas fa-caret-down" aria-hidden="true"></i></span></a>
-<ul class="sub-menu elementor-nav-menu--dropdown" id="sm-1762160964485964-2" role="group" aria-hidden="true" aria-labelledby="sm-1762160964485964-1" aria-expanded="false">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-848"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Digital Printed Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Fancy Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Ready to Hang Curtain</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1617"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Blackout Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1618"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Embroidered Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1619"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Jacquard Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1620"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Linen Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1621"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Organza Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1622"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Sheer Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1623"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Silk Curtains</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1624"><a href="curtains_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Velvet Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1360"><a class="elementor-item menu-link" href="wallpapers_ahtisham.html">WallPapers</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1359"><a class="elementor-item menu-link" href="flooring_ahtisham.html">Flooring</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1358"><a class="elementor-item menu-link" href="pailing_ahtisham.html">Pailing</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-552"><a class="elementor-item menu-link" href="sofas_ahtisham.html">Sofa</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26"><a class="elementor-item menu-link" href="products_ahtisham.html">Products</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a class="elementor-item menu-link" href="rods_ahtisham.html">Rods</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-819"><a class="elementor-item menu-link" href="projects_ahtisham.html">Projects</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a class="elementor-item menu-link" href="about_ahtisham.html">About us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a class="elementor-item menu-link" href="contact_ahtisham.html">Contact us</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1072"><a class="elementor-item menu-link" href="blog_ahtisham.html">Blog</a></li>
+</ul> </nav>
+<div aria-expanded="false" aria-label="Menu Toggle" class="elementor-menu-toggle" role="button" tabindex="0">
+<i aria-hidden="true" class="elementor-menu-toggle__icon--open eicon-menu-bar" role="presentation"></i><i aria-hidden="true" class="elementor-menu-toggle__icon--close eicon-close" role="presentation"></i> </div>
+<nav aria-hidden="true" class="elementor-nav-menu--dropdown elementor-nav-menu__container" style="--menu-height: 0;">
+<ul class="elementor-nav-menu" data-smartmenus-id="1762160964485964" id="menu-2-52182ae1"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-12 current_page_item menu-item-23"><a aria-current="page" class="elementor-item elementor-item-active menu-link" href="index.html" tabindex="-1">Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-76"><a aria-controls="sm-1762160964485964-2" aria-expanded="false" aria-haspopup="true" class="elementor-item menu-link has-submenu" href="curtains_ahtisham.html" id="sm-1762160964485964-1" tabindex="-1">Curtains<span class="sub-arrow"><i aria-hidden="true" class="fas fa-caret-down"></i></span></a>
+<ul aria-expanded="false" aria-hidden="true" aria-labelledby="sm-1762160964485964-1" class="sub-menu elementor-nav-menu--dropdown" id="sm-1762160964485964-2" role="group">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-848"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Digital Printed Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Fancy Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Ready to Hang Curtain</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1617"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Blackout Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1618"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Embroidered Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1619"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Jacquard Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1620"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Linen Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1621"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Organza Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1622"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Sheer Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1623"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Silk Curtains</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1624"><a class="elementor-sub-item menu-link" href="curtains_ahtisham.html" tabindex="-1">Velvet Curtains</a></li>
 </ul>
 </li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-491"><a aria-expanded="false" href="blinds_ahtisham.html" class="elementor-item menu-link has-submenu" tabindex="-1" id="sm-1762160964485964-3" aria-haspopup="true" aria-controls="sm-1762160964485964-4">Blinds<span class="sub-arrow"><i class="fas fa-caret-down" aria-hidden="true"></i></span></a>
-<ul class="sub-menu elementor-nav-menu--dropdown" id="sm-1762160964485964-4" role="group" aria-hidden="true" aria-labelledby="sm-1762160964485964-3" aria-expanded="false">
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-586"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Chick Blinds</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-492"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Roller Blinds</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-493"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Roman Blinds</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-646"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Venetian Blinds</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-494"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Wooden Blinds</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-495"><a href="blinds_ahtisham.html" class="elementor-sub-item menu-link" tabindex="-1">Zebra Roller Blind</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-491"><a aria-controls="sm-1762160964485964-4" aria-expanded="false" aria-haspopup="true" class="elementor-item menu-link has-submenu" href="blinds_ahtisham.html" id="sm-1762160964485964-3" tabindex="-1">Blinds<span class="sub-arrow"><i aria-hidden="true" class="fas fa-caret-down"></i></span></a>
+<ul aria-expanded="false" aria-hidden="true" aria-labelledby="sm-1762160964485964-3" class="sub-menu elementor-nav-menu--dropdown" id="sm-1762160964485964-4" role="group">
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-586"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html" tabindex="-1">Chick Blinds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-492"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html" tabindex="-1">Roller Blinds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-493"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html" tabindex="-1">Roman Blinds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-646"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html" tabindex="-1">Venetian Blinds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-494"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html" tabindex="-1">Wooden Blinds</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-495"><a class="elementor-sub-item menu-link" href="blinds_ahtisham.html" tabindex="-1">Zebra Roller Blind</a></li>
 </ul>
 </li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1360"><a href="wallpapers_ahtisham.html" class="elementor-item menu-link" tabindex="-1">WallPapers</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1359"><a href="flooring_ahtisham.html" class="elementor-item menu-link" tabindex="-1">Flooring</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1358"><a href="pailing_ahtisham.html" class="elementor-item menu-link" tabindex="-1">Pailing</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-552"><a href="sofas_ahtisham.html" class="elementor-item menu-link" tabindex="-1">Sofa</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26"><a href="products_ahtisham.html" class="elementor-item menu-link" tabindex="-1">Products</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="rods_ahtisham.html" class="elementor-item menu-link">Rods</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-819"><a href="projects_ahtisham.html" class="elementor-item menu-link" tabindex="-1">Projects</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a href="about_ahtisham.html" class="elementor-item menu-link" tabindex="-1">About us</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="contact_ahtisham.html" class="elementor-item menu-link" tabindex="-1">Contact us</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1072"><a href="blog_ahtisham.html" class="elementor-item menu-link" tabindex="-1">Blog</a></li>
-</ul>			</nav>
-						</div>
-				</div>
-					</div>
-		</div>
-					</div>
-		</section>
-				</header>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1360"><a class="elementor-item menu-link" href="wallpapers_ahtisham.html" tabindex="-1">WallPapers</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1359"><a class="elementor-item menu-link" href="flooring_ahtisham.html" tabindex="-1">Flooring</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1358"><a class="elementor-item menu-link" href="pailing_ahtisham.html" tabindex="-1">Pailing</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-552"><a class="elementor-item menu-link" href="sofas_ahtisham.html" tabindex="-1">Sofa</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26"><a class="elementor-item menu-link" href="products_ahtisham.html" tabindex="-1">Products</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a class="elementor-item menu-link" href="rods_ahtisham.html">Rods</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-819"><a class="elementor-item menu-link" href="projects_ahtisham.html" tabindex="-1">Projects</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24"><a class="elementor-item menu-link" href="about_ahtisham.html" tabindex="-1">About us</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a class="elementor-item menu-link" href="contact_ahtisham.html" tabindex="-1">Contact us</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1072"><a class="elementor-item menu-link" href="blog_ahtisham.html" tabindex="-1">Blog</a></li>
+</ul> </nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</header>
 <main class="catalog-wrap">
   <div class="catalog-header">
     <h1>Curta<span style="letter-spacing:-1px">i</span>ns</h1>
@@ -1978,5 +2029,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })();
 </script>
 
+<script>
+(function(){
+  function ready(fn){ if(document.readyState!=='loading'){fn();} else {document.addEventListener('DOMContentLoaded', fn);} }
+  ready(function(){
+    var btn = document.getElementById('mobileMenuToggle');
+    var panel = document.getElementById('mobileMenuPanel');
+    if(!btn || !panel) return;
+    btn.addEventListener('click', function(){
+      panel.classList.toggle('is-open');
+    });
+  });
+})();
+</script>
 </body>
 </html>
