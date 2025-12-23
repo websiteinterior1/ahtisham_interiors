@@ -1171,7 +1171,29 @@ img, video, iframe { max-width: 100%; height: auto; }
   .mobile-menu-panel a + a{ margin-top:8px; }
   .mobile-menu-panel.is-open{ display:block; }
 }
-</style></head>
+</style>
+<style>
+/* Mobile: make hamburger (menu toggle) visible + black */
+@media (max-width: 768px){
+  .elementor-menu-toggle,
+  .menu-toggle{
+    color:#000 !important;
+  }
+  .elementor-menu-toggle i,
+  .menu-toggle i,
+  .elementor-menu-toggle svg{
+    fill:#000 !important;
+    stroke:#000 !important;
+  }
+  /* Ensure the open icon bars inherit the color */
+  .elementor-menu-toggle__icon--open,
+  .elementor-menu-toggle__icon--close{
+    color:#000 !important;
+  }
+}
+</style>
+
+</head>
 <body class="home wp-singular page-template-default page page-id-12 wp-custom-logo wp-theme-astra wp-child-theme-astra-child theme-astra woocommerce-js ast-desktop ast-page-builder-template ast-no-sidebar astra-4.11.5 ast-header-custom-item-inside group-blog ast-single-post ast-mobile-inherit-site-logo ast-inherit-site-logo-transparent elementor-default elementor-kit-36 elementor-page elementor-page-12 e--ua-isTouchDevice e--ua-blink e--ua-chrome e--ua-webkit" data-elementor-device-mode="desktop" itemscope="itemscope" itemtype="https://schema.org/WebPage" style="">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-K97RVR2" style="display:none;visibility:hidden" width="0"></iframe></noscript>
